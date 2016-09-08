@@ -1,0 +1,55 @@
+EX 2.10
+
+int iResult, num1 = 25, num2 = 40, num3 = 17, num4 = 5;
+double fResult, val1 = 17.0, val2 = 12.78;
+
+a. iResult = num1 / num4; //25 / 5 = 5
+--> 5 <--
+
+b. fResult = num1 / num4; //25 / 5 = 5.0
+--> 5.0 <--
+
+c. iResult = num3 / num4; //17 / 5 = 3;
+--> 3 <--
+
+d. fResult = num3 / num4; //17 / 5 = 3.4;
+--> 3.4 <--
+
+e. fResult = val1 / num4; //17.0 / 5 = 3.4;
+--> 3.4 <--
+
+f. fResult = val1 / val2; //25 / 40 = 0.625;
+--> 0.625 <--
+
+g. iResult = num1 / num2; //25 / 40 = 0;
+--> 0 <--
+
+h. fResult = (double) num1 / num2; //25.0 / 40 = 0.625;
+--> 0.625 <--
+
+i. fResult = num1 / (double) num2; //25 / 40.0 = 0.625;
+--> 0.625 <--
+
+j. fResult = (double) (num1 / num2); //(double) (0) = 0.0
+--> 0.0 <--
+
+k. iResult = (int) (val1 / num4); //(int) (17.0 / 5) = (int) (3.4) = 3;
+--> 3 <--
+
+l. fResult = (int) (val1 / num4); //(int) (17.0 / 5) = (int) (3.4) = 3 = 3.0;
+--> 3.0 <--
+
+m. fResult = (int) ((double) num1 / num2); //(int) ((double) 25 / 40) = (int) (25.0 / 40) = (int) (0.625) = 0 = 0.0;
+--> 0.0 <--
+
+n. iResult = num3 % num4; //17 % 5 = 3;
+--> 3 <--
+
+o. iResult = num2 % num3; //40 % 17 = 6;
+--> 6 <--
+
+p. iResult = num3 % num2; //17 % 40 = 17;
+--> 17 <--
+
+q. iResult = num2 % num4; //40 % 5 = 0;
+--> 0 <--
