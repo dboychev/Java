@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class Test 
 {
-
 	public static void main(String[] args) 
 	{
 		int num = 0, i = 0;
@@ -16,5 +15,4 @@ public class Test
 		double average = (double) num / 3;
 		System.out.println(average);
 	}
-
 }
