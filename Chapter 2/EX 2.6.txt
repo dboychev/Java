@@ -1,0 +1,8 @@
+EX 2.6
+
+size = 18; //18
+size = size + 12; //30
+size = size * 2; //60
+size = size / 4; //15
+
+--> 15 <--
