@@ -4,3 +4,6 @@ Here we go!12345
 Test this if you are not sure.Another.
 All done.
 
+/* Explanation
+1st line text and just after it the second line text. The following string is printed on the next line because the last function was 'println'. The next string is on the same line again because it is just 'print'. The last string goes to the next line because we have a 'println' with no parameter which is just a new line. After the last string the text finishes on the next line because it was 'println'.
+*/
