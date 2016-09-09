@@ -12,14 +12,14 @@ b. fResult = num1 / num4; //25 / 5 = 5.0
 c. iResult = num3 / num4; //17 / 5 = 3;
 --> 3 <--
 
-d. fResult = num3 / num4; //17 / 5 = 3.4;
---> 3.4 <--
+d. fResult = num3 / num4; //17 / 5 = 3 = 3.0;
+--> 3.0 <--
 
 e. fResult = val1 / num4; //17.0 / 5 = 3.4;
 --> 3.4 <--
 
-f. fResult = val1 / val2; //25 / 40 = 0.625;
---> 0.625 <--
+f. fResult = val1 / val2; //25 / 40 = 0 = 0.0;
+--> 0.0 <--
 
 g. iResult = num1 / num2; //25 / 40 = 0;
 --> 0 <--
