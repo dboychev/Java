@@ -1,0 +1,19 @@
+EX 3.6
+
+/*-----> CODE <-----*/
+a. generator.nextInt(20); //[0 ; 19]
+
+b. generator.nextInt(8) + 1; //[1 ; 8]
+
+c. generator.nextInt(45) + 10; //[10 ; 54]
+
+d. generator.nextInt(100) - 50; //[-50 ; 49] 
+
+/*-----> RANGES <-----*/
+a. [0 ; 19]
+
+b. [1 ; 8]
+
+c. [10 ; 54]
+
+d. [-50 ; 49]
