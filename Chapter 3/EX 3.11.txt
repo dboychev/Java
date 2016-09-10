@@ -4,5 +4,4 @@ DecimalFormat fmt = new DecimalFormat ("0.###");
 double num;
 System.out.print("Enter num = ");
 num = scan.nextDouble();
-num = Math.pow(num, 4);
-System.out.println(fmt.format(num));
+System.out.println(fmt.format(Math.pow(num, 4)));
