@@ -1,11 +1,11 @@
 EX 3.4
 
-*/-----> CODE <-----/*
+/*-----> CODE <-----*/
 String m1, m2, m3;
 m1 = "Quest for the Holy Grail"; //Quest for the Holy Grail
 m2 = m1.toLowerCase(); //quest for the holy grail
 m3 = m1 + " " + m2; //Quest for the Holy Grail quest for the holy grail
 System.out.println (m3.replace('h', 'z')); //Quest for tze Holy Grail quest for tze zoly grail
 
-*/-----> OUTPUT <-----/*
+/*-----> OUTPUT <-----*/
 Quest for tze Holy Grail quest for tze zoly grail
