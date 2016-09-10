@@ -1,0 +1,8 @@
+EX 3.11
+
+DecimalFormat fmt = new DecimalFormat ("0.###");
+double num;
+System.out.print("Enter num = ");
+num = scan.nextDouble();
+num = Math.pow(num, 4);
+System.out.println(fmt.format(num));
