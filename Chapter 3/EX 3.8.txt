@@ -1,0 +1,9 @@
+EX 3.8
+
+Scanner scan = new Scanner(System.in);
+
+double num1, num2, num3;
+num1 = scan.nextDouble();
+num2 = scan.nextDouble();
+num3 = Math.sqrt(num1 + num2);
+System.out.println(num3);
