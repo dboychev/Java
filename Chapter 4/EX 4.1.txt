@@ -1,0 +1,11 @@
+EX 4.1
+
+a. Superhero - class, Superman - object
+
+b. Justin - object, Person - class
+
+c. Rover - object, Pet - class
+
+d. Magazine - class, Time - object
+
+e. Christmas - object, Holiday - class

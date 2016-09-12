@@ -1,0 +1,13 @@
+EX 4.9
+
+Random generator = new Random(System.in);
+
+public Color randomColor()
+{
+	int red = generator.nextInt(256);
+	int green = generator.nextInt(256);
+	int blue = generator.nextInt(256);		
+
+	Color color = new Color (red, green, blue);
+	return color;
+}

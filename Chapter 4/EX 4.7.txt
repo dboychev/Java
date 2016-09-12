@@ -1,0 +1,8 @@
+EX 4.7
+
+Random generator = new Random(System.in);
+
+public int random100()
+{
+	return (generator.nextInt(100) + 1);
+}
