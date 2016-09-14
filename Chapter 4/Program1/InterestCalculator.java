@@ -57,7 +57,7 @@ public class InterestCalculator
 		String info = new String("Initial Deposit: " + getDeposit() + "\n"
 		+ "Interest Rate: " + getInterestRate() + "%\n"
 		+ "Number of Interest Payments: " + getTimes() + "\n"
-		+ "Final amount: " + fmt.format(deposit * (Math.pow(1 + (interestRate / 100), times))));
+		+ "Final amount: " + fmt.format(deposit * (Math.pow(1 + (interestRate / 100 / times), times))));
 		
 		return info;
 	}
