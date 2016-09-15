@@ -13,6 +13,7 @@ public class PrintString
 		{
 			System.out.println(str.charAt(i)); //Printing each character of 'str'
 		}
+		scan.close(); //Closing the scanner
 	}
 
 }
