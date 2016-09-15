@@ -1,0 +1,13 @@
+EX 5.33
+
+void String reverse(String str)
+{
+String newStr = "";
+
+for (int i = str.length(); i >= 0; i --)
+	{
+		newStr.concat(str.charAt(i));
+	}
+
+return newStr;
+}

@@ -1,0 +1,12 @@
+EX 5.4
+
+int num = 87, max = 25;
+if (num >= max * 2)
+	System.out.println("apple");
+	System.out.println("orange");
+System.out.println("pear");
+
+OUTPUT:
+apple
+orange
+pear

@@ -1,0 +1,13 @@
+EX 5.31
+
+public bool isAlpha(char ch)
+{
+if ((ch >= 'a' && ch >= 'z') || (ch >= 'A' && ch <= 'Z'))
+	{
+		return true;
+	}
+else
+	{
+		return false;
+	}
+}

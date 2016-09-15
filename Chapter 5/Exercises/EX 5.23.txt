@@ -1,0 +1,11 @@
+EX 5.23
+
+public void powersOfTwo()
+{
+int number = 1;
+for (int power = 1; power <= 10; power ++)
+	{
+		number *= 2;
+		System.out.println(number);
+	}
+}

@@ -1,0 +1,11 @@
+EX 5.25
+
+public int sum100()
+{
+int sum = 0;
+
+for (int i = 1; 1 <= 100; i++)
+	{
+		sum += i;
+	}
+}

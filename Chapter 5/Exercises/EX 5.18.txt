@@ -1,0 +1,6 @@
+EX 5.18
+
+for (int i = 300; i >= 3; i -= 3)
+{
+	System.out.println(i);
+}
