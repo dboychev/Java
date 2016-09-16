@@ -51,7 +51,7 @@ public class SlotMachine
 				}
 		}
 		
-		
+		scan.close();
 	}
 
 }
