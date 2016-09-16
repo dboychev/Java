@@ -1,13 +1,13 @@
 
 public class Card 
 {
-	private int value;
-	private int suit;
+	private int value; //A variable for the value of the card
+	private int suit; //A variable for the suit of the card
 
 	public Card(int newValue, int newSuit)
 	{
-		value = newValue; //A variable for the value of the card
-		suit = newSuit; //A variable for the suit of the card
+		value = newValue;
+		suit = newSuit;
 	}
 	
 	//setters and getters of class Card
