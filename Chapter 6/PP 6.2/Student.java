@@ -1,8 +1,8 @@
 
 public class Student 
 {
-	private String firstName, lastName;
-	private Address homeAddress, schoolAddress;
+	private String firstName, lastName; //Strings for saving the names of the student
+	private Address homeAddress, schoolAddress; //Two objects of type 'Address' for saving the home and school addresses
 	private int test1, test2, test3; //Adding 3 variables for 3 test
 	
 	//Overloading the constructor:
@@ -70,7 +70,7 @@ public class Student
 		return (double)(test1 + test2 + test3) / 3;
 	}
 	
-	public String toString()
+	public String toString() //Printing the information for a student
 	{
 		String result;
 		
