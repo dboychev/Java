@@ -1,7 +1,7 @@
 
 public class StudentBody {
 
-	public static void main(String[] args) 
+	public static void main(String[] args) //Creating some 'Student' and 'Address' objects and printing them
 	{
 		Address school = new Address ("800 Lancaster Ave.", "Villanova", "PA", 19085);
 		
