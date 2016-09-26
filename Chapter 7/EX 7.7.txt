@@ -1,0 +1,14 @@
+EX 7.7
+
+for (int i = 0; i < array.length; i++)
+{
+	if (i % 2 == 0)
+	{
+		array[i] = true;
+	}
+	
+	else
+	{
+		array[i] = false;
+	}
+}
