@@ -1,0 +1,6 @@
+Tonka Truck,2
+Barbie,4
+Simon,1
+Monopoly,10
+Nerf Football,5
+
