@@ -1,0 +1,4 @@
+150	Ivan
+100	Asen
+40	Georgi
+10	Dimitar
