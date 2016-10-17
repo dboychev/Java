@@ -84,11 +84,8 @@ public class Game
 		
 		System.out.println("GAME OVER");
 		System.out.println("Final score: " + points);
-	
-		/*if (saveScore(points))
-		{
-			System.out.print("New high score!");
-		}*/
+		
+		saveScore(points); //Printing all the players and points saved
 	}
 
 	public boolean isCompletedRow(int row)
@@ -164,6 +161,131 @@ public class Game
 		{
 			System.out.println(printPoints(count)); //Printing the points won for cempleting the rows
 		}
+	}
+	
+	public void saveScore(int points) throws IOException
+	{
+		boolean newHighScore = false;
+		
+		File fileName = new File("scores.txt"); //Creating an object to open the file
+		Scanner fileScan = new Scanner(fileName); //Creating an object for scanning through the file
+		Scanner scan = new Scanner(System.in); //Creating an object for reading input
+		
+		String text = ""; //Saving the text of the file to a string
+		int size = 0; //Counting the number of players saved in high scores
+		
+		while (fileScan.hasNextLine()) //Until reaching the end of the file
+		{
+			text += fileScan.nextLine(); //Saving to the string one by one
+			size++;
+		}
+		text += '\0';
+		
+		String[] name = new String[size + 1]; //Creating two arrays - one for the names of the players
+		int[] score = new int[size + 1]; //the other - for their scores
+		
+		//The arrays 'name' and 'score' are getting their values by substrings from the 'text' string
+		//'j' is used for finding the start and end index of each substring
+		int j = 0, start = 0, end = j;
+		for (int i = 0; i < size && text.charAt(j) != '\0'; i++)
+		{
+			while (text.charAt(j) < '0' || text.charAt(j) > '9') //Get to the first digit
+			{
+				j++;
+			}
+			
+			start = j;
+			while (text.charAt(j) >= '0' && text.charAt(j) <= '9') //Now get to the last digit
+			{
+				j++;
+			}
+			end = j;
+			
+			score[i] = Integer.parseInt(text.substring(start, end));
+		
+			while (text.charAt(j) == '\t') //Skipping the tab and reaching the name's first letter
+			{
+				j++;
+			}
+			start = j;
+	
+			//Now getting to the end of the name
+			while ((text.charAt(j) >= 'a' && text.charAt(j) <= 'z') || (text.charAt(j) >= 'A' && text.charAt(j) <= 'Z'))
+			{
+				j++;
+			}
+			end = j;
+			
+			name[i] = text.substring(start, end);
+		}
+			
+		if (points > 0) //If the user has scored any points
+		{
+			System.out.print("Enter your name: ");
+			String player = scan.nextLine();
+			score[size] = points; //The user's information is going to the end of the array - last place
+			name[size] = player;
+		}
+		
+		else
+		{
+			size--;
+		}
+		
+		int i = 0;
+		while (i < size && score[i] > score[size]) //Reaching the first player with smaller score than the new one
+		{
+			i++;
+		}
+		
+		if (i == 0) //If 'i' = 0 that means there is no one with greater score than ours, so it is a new high score
+		{
+			newHighScore = true;
+		}
+		
+		if (score[size] >= score[i])
+		{
+			String saveName = name[size];
+			int saveScore = score[size];
+						
+			//Sorting the scores and names
+			for (int l = size; l > i; l--)
+			{
+				name[l] = name[l - 1];
+				score[l] = score[l - 1];
+			}
+			
+			name[i] = saveName;
+			score[i] = saveScore;
+		}
+		
+		//Opening the file and writing the information in it
+		BufferedWriter outputWriter = null;
+		outputWriter = new BufferedWriter(new FileWriter(fileName));
+		
+		for (int r = 0; r < size + 1; r++) 
+		{
+			    // Maybe:
+		outputWriter.write(score[r] + name[r] + "\r\n");
+			    // Or:
+		//outputWriter.newLine();
+		}
+		
+		outputWriter.flush();  
+		outputWriter.close();
+		
+		if (newHighScore)
+		{
+			System.out.println("\nNew high score!");
+		}
+		System.out.println("SCORES");
+		for (int p = 0; p < size + 1; p++)
+		{
+			System.out.println(score[p] + "\t" + name[p]);
+		}
+		
+		scan.close();
+		fileScan.close();
 	}
 	
 	/*public boolean saveScore(int points) throws IOException

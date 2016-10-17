@@ -7,7 +7,7 @@ public class Block
   public Block(Grid grid)
   {
 	display = grid;
-    int shapeNum = (int)(Math.random() * 3);
+    int shapeNum = (int)(Math.random() * 5);
     if (shapeNum == 0)
     {
     	// Magenta "stick"
@@ -26,6 +26,29 @@ public class Block
     	locs[2] = new Location(1,4);
     	color = new Color(255, 255, 0);
     }
+    
+    else if (shapeNum == 2)
+    {
+    	//New figure - a square - white color
+    	locs = new Location[4];
+    	locs[0] = new Location(0,4);
+    	locs[1] = new Location(0,5);
+    	locs[2] = new Location(1,4);
+    	locs[3] = new Location(1,5);
+    	color = new Color(255, 255, 255);
+    }
+    
+    else if (shapeNum == 3)
+    {
+    	//New figure - 4 blocks - grey color
+    	locs = new Location[4];
+    	locs[0] = new Location(0,4);
+    	locs[1] = new Location(0,3);
+    	locs[2] = new Location(0,5);
+    	locs[3] = new Location(1,5);
+    	color = new Color(127, 127, 127);    	
+    }
+    
     else
     {
     	// Cyan "T"
@@ -80,88 +103,70 @@ public class Block
 		
 		  i++;
 	  }
-	  
-	  
-	  
-	  /*for (int i = 0; i < locs.length; i++)
-	  {
-		  //Checking if the location is valid (is in the grid)
-		  if ((locs[i].getRow() > display.getNumRows() - 1 || locs[i].getRow() < 0) 
-				  || (locs[i].getCol() > display.getNumCols() - 1 || locs[i].getCol() < 0))
-		  {
-			  valid = false; //If there is one cell from the figure that is not valid, the figure is not valid
-		  }
 		  
-		  //Checking if the location is empty (cells should be black)
-		  if (valid)
-		  {
-			  if (!(display.getColor(locs[i]).equals(black)))
-			  {
-				  empty = false; //If there is one cell from the figure that is not empty, the figure cannot be shifted
-			  }
-		  }
-	  }*/
-	  
 	  return (valid && empty);  // remove this instruction when you write this method
   }
   
   public boolean shift(int deltaRow, int deltaCol)
   {
-	  boolean moved = false;
+	  boolean moved = false; //A boolean that shows if the block has moved
 	  
-	  Color black = new Color(0, 0, 0);
+	  Color black = new Color(0, 0, 0); //A color object for the black
 	  
 	  for (int i = 0; i < locs.length; i++)
 	  {
-		  display.setColor(locs[i], black);
+		  display.setColor(locs[i], black); //Setting all the block's color to black
 	  }
 	  
-	  Location[] newLocs = new Location[locs.length];
+	  Location[] newLocs = new Location[locs.length]; //Creating a new array for the blocks with their new positions
 	  
 	  for (int i = 0; i < locs.length; i++)
 	  {
+		  //The new array gets the old positions but with some changes
 		  newLocs[i] = new Location (locs[i].getRow() + deltaRow, locs[i].getCol() + deltaCol);
 	  }
 	  
-	  if (areValidAndEmpty(newLocs))
+	  if (areValidAndEmpty(newLocs)) //Checking whether the block can be moved
 	  {
 		  for (int i = 0; i < locs.length; i++)
 		  {
 			  locs[i] = newLocs[i];		
 		  }
 		  
-		  moved = true;
+		  moved = true; //The block was successfully moved
 	  }
 	  
 	  for (int i = 0; i < locs.length; i++)
 	  {
-		  display.setColor(locs[i], color);
+		  display.setColor(locs[i], color); //Giving the figure its color again
 	  }
 	  
-	  return moved;  // remove this instruction when you write this method
+	  return moved;
   }
 
   public void rotate()
   {
-	  Color black = new Color(0, 0, 0);
+	  Color black = new Color(0, 0, 0); //Object for the black color
 	  
 	  int row0 = locs[0].getRow();
 	  int col0 = locs[0].getCol();
 	  
 	  for (int i = 0; i < locs.length; i++)
 	  {
-		  display.setColor(locs[i], black);
+		  display.setColor(locs[i], black); //Setting the blocks of the figure to black 
 	  }
 	  
-	  Location[] newLocs = new Location[locs.length];
+	  Location[] newLocs = new Location[locs.length]; //Creating a new object for the new positions
 	  
 	  for (int i = 0; i < locs.length; i++)
 	  {
+		  //Calculating the new locations by a formula
 		  newLocs[i] = new Location (row0 + locs[i].getCol() - col0, col0 + row0 - locs[i].getRow());
 	  }
 	  
 	  if (areValidAndEmpty(newLocs))
 	  {
+		  //If the figure can be rotated - the old array gets the new locations
 		  for (int i = 0; i < locs.length; i++)
 		  {
 			  locs[i] = newLocs[i];		
@@ -170,6 +175,7 @@ public class Block
 	  
 	  for (int i = 0; i < locs.length; i++)
 	  {
+		  //Giving back the old color of the figure
 		  display.setColor(locs[i], color);
 	  }
   
