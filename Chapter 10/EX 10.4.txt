@@ -1,0 +1,9 @@
+EX 10.4
+
+a. ArithmeticException - thrown when attempt for an invalid arithmetic operation is made. For example - divide by zero.
+
+b. NullPointerException - thrown when attempt to use null instead of an object, a method of an object or a field of an object is made.
+
+c. NumberFormatException - thrown when attemp to format as a number a non-number value is made.
+
+d. PatternSyntaxException - thrown when a syntax error in a string is made.
