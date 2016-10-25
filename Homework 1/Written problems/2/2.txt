@@ -1,0 +1,6 @@
+If length of first string is 'm' and length of second string is 'n':
+
+The maximum number of couples 'mn' is m x n. 
+Maximum number of symbols - (m x n) couples + (m x n) white spaces = (m * n * 2 + m * n) = m * n * 3
+
+m * n * 3
