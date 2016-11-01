@@ -1,0 +1,2 @@
+A checked exception can be handled. Unchecked exceptions shows a message for the error and stops the compiling of the program. If exception is handled, the program may continue, even a suitable message may be printed.
+"try" and "catch" are used for handling exceptions. Examples - "ArrayIndexOutOfBoundsException", "NullPointerException", "FileNotFoundException".

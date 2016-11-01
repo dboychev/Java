@@ -1,0 +1,12 @@
+//******************************
+//This method takes an array
+//and an integer as parameters
+//and returns the index of
+//the first occurence of that
+//integer in the array. If the
+//target is not found,
+//the method returns -1.
+//@param int[] data - the array
+//@param int target - the target
+//@return int - target's index
+//******************************

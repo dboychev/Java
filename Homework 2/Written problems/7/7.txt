@@ -1,0 +1,7 @@
+- target is at first place
+- target is at last place
+- target is not in the array
+- there is more than one occurence of the target
+- array is empty
+- array has only one element
+- target is somewhere after the first place and before the last one
