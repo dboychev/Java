@@ -25,9 +25,18 @@ public class PDGUI implements PDUserInterface {
 		 
 		 directory = dir;
 		 int choice;
+		 JFrame frame = null;
 		 
 		 do {
-			 choice = JOptionPane.showOptionDialog(null,
+			 if (frame == null)
+				 {
+				 frame = new JFrame();
+				 }
+			 frame.setVisible(true);
+			 frame.setLocation(800, 500);
+			 frame.setAlwaysOnTop(true);
+			 
+			 choice = JOptionPane.showOptionDialog(frame,
 					 "Select a command", 
 					 "Phone Directory", 
 					 JOptionPane.YES_NO_CANCEL_OPTION, 
@@ -35,7 +44,7 @@ public class PDGUI implements PDUserInterface {
 					 null, 
 					 commands,
 					 commands[commands.length - 1]);
-		 
+			 
 			 switch (choice) {
 			 	case 0: doAddChangeEntry(); break;
 			 	case 1: doLookupEntry(); break;
@@ -53,7 +62,10 @@ public class PDGUI implements PDUserInterface {
 	{
 		directory.reverseOrder();
 		
-		System.out.println("Order of directory entries reversed!");
+		String message = "Order of directory entries reversed!";
+
+		// Display confirmation message
+		JOptionPane.showMessageDialog(null, message);
 	}
 	 
 	private void doAddChangeEntry() {
@@ -66,8 +78,9 @@ public class PDGUI implements PDUserInterface {
 		
 		// Request the number
 		String newNumber = JOptionPane.showInputDialog("Enter number for " + newName);
-		if (newNumber == null)
+		if (newNumber == null){
 			return;		// dialog was cancelled
+		}
 		
 		// Insert or change the number
 		String oldNumber = directory.addOrChangeEntry(newName, newNumber);

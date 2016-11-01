@@ -18,10 +18,15 @@ public class PDApplication {
 		System.out.println("Would you like the GUI interface? (y/n)?");
 		String response = scan.nextLine().toLowerCase();
 		if (response.length() > 0 && response.charAt(0) == 'y')
-				pdInterface = new PDGUI();
+		{
+			pdInterface = new PDGUI();
+			System.out.println("GUI interface chosen!");
+		}
 		else
-				pdInterface = new PDConsoleUI();
-
+		{
+			pdInterface = new PDConsoleUI();
+			System.out.println("Console interface chosen!");
+		}
 		pdInterface.processCommands(pd);
 		
 		scan.close();
