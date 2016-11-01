@@ -1,0 +1,67 @@
+At PhoneDirectory class - new method:
+
+public String lastNumber()
+{
+	String result = directoryArray[numEntries - 1].getName() + " / " + directoryArray[numEntries - 1].getNumber() + "\n"; 
+	return result;
+}
+
+
+At PDConsoleUI class - changes in processCommands method:
+
+String[] commands = {"Add/Change Entry",
+ 	"Look Up Entry",
+ 	"Remove Entry",
+ 	"Get Last Entry",
+	"Reverse Entries",
+	"Save Directory",
+	"Exit"};
+
+
+
+switch (choice) 
+{
+ 	case 0: doAddChangeEntry(); break;
+ 	case 1: doLookupEntry(); break;
+ 	case 2: doRemoveEntry(); break;
+ 	case 3: doGetLastEntry(); break; //New row
+ 	case 4:	doReverseEntries(); break; //3 changed to 4, 4 changed to 5
+ 	case 5: doSave(); break;
+	default:  // do nothing
+}
+
+
+New method added:
+
+private void doGetLastEntry()
+{
+	System.out.println("Last entry is: " + directory.lastNumber());
+}
+
+At PDGUI class - changes in processCommands:
+
+String[] commands = {"Add/Change Entry",
+	"Look Up Entry",
+	"Remove Entry",
+	"Get Last Entry",
+	"Reverse Entries",
+	"Save Directory",
+	"Exit"};
+
+switch (choice) {
+	case 0: doAddChangeEntry(); break;
+	case 1: doLookupEntry(); break;
+	case 2: doRemoveEntry(); break;
+	case 3: doGetLastEntry(); break;
+	case 4:	doReverseEntries(); break;
+	case 5: doSave(); break;
+	default:  // do nothing
+}
+
+New method added:
+
+private void doGetLastEntry()
+{
+	String message = "Last entry: " + directory.lastNumber();
+	JOptionPane.showMessageDialog(null, message);
+}

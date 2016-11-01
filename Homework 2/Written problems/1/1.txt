@@ -1,0 +1,26 @@
+public String lookupEntry(String name) 
+{
+	int index = find(name);
+	if (index > -1) 
+	{
+		if (index > 0) //If our name is not on 0 position
+		{
+			DirectoryEntry temp = directoryArray[index];
+			
+			//Shifting all the elements between our one and the first one over one position
+			for (int i = index; i > 0; i--)
+			{
+				directoryArray[i] = directoryArray[i - 1];
+			}
+		
+			//Now our name is on the first position
+			directoryArray[0] = temp;
+		}
+		
+		return directoryArray[index].getNumber();
+	} 
+	else 
+	{
+		return null;
+	}
+}

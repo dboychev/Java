@@ -1,0 +1,1 @@
+We can not just set the array cell to null because the array would have a hole after that between the neighbour elements of the one we want to remove. There would be an error every time we go through that element of the array.
