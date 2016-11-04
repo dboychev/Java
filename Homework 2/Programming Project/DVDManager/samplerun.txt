@@ -1,0 +1,134 @@
+Enter name of data file to load:
+dvddata.txt
+Input interface type: C=Console, G=GUI
+C
+Select 0: Add/Modify DVD
+Select 1: Remove DVD
+Select 2: Get DVDs By Rating
+Select 3: Get Total Running Time
+Select 4: Save and Exit
+0
+Enter title
+Spartacus
+Enter rating
+NC-17
+Enter running time
+56
+Adding/Modifying: SPARTACUS,NC-17,56
+numdvds = 8
+dvdArray.length = 14
+dvdArray[0] = ANGELS AND DEMONS / PG-13 / 138
+dvdArray[1] = DR WHO / PG-13 / 85
+dvdArray[2] = FAST AND FURIOUS / PG / 95
+dvdArray[3] = LOST / G / 55
+dvdArray[4] = MONK / NC-17 / 55
+dvdArray[5] = SPARTACUS / NC-17 / 56
+dvdArray[6] = STAR TREK / R / 127
+dvdArray[7] = TROY / R / 99
+
+Select 0: Add/Modify DVD
+Select 1: Remove DVD
+Select 2: Get DVDs By Rating
+Select 3: Get Total Running Time
+Select 4: Save and Exit
+0
+Enter title
+MONK
+Enter rating
+G
+Enter running time
+51
+Adding/Modifying: MONK,G,51
+numdvds = 8
+dvdArray.length = 14
+dvdArray[0] = ANGELS AND DEMONS / PG-13 / 138
+dvdArray[1] = DR WHO / PG-13 / 85
+dvdArray[2] = FAST AND FURIOUS / PG / 95
+dvdArray[3] = LOST / G / 55
+dvdArray[4] = MONK / G / 51
+dvdArray[5] = SPARTACUS / NC-17 / 56
+dvdArray[6] = STAR TREK / R / 127
+dvdArray[7] = TROY / R / 99
+
+Select 0: Add/Modify DVD
+Select 1: Remove DVD
+Select 2: Get DVDs By Rating
+Select 3: Get Total Running Time
+Select 4: Save and Exit
+0
+Enter title
+FAST AND FURIOUS 5
+Enter rating
+PG
+Enter running time
+90
+Adding/Modifying: FAST AND FURIOUS 5,PG,90
+numdvds = 9
+dvdArray.length = 14
+dvdArray[0] = ANGELS AND DEMONS / PG-13 / 138
+dvdArray[1] = DR WHO / PG-13 / 85
+dvdArray[2] = FAST AND FURIOUS / PG / 95
+dvdArray[3] = FAST AND FURIOUS 5 / PG / 90
+dvdArray[4] = LOST / G / 55
+dvdArray[5] = MONK / G / 51
+dvdArray[6] = SPARTACUS / NC-17 / 56
+dvdArray[7] = STAR TREK / R / 127
+dvdArray[8] = TROY / R / 99
+
+Select 0: Add/Modify DVD
+Select 1: Remove DVD
+Select 2: Get DVDs By Rating
+Select 3: Get Total Running Time
+Select 4: Save and Exit
+1
+Enter title
+FAST AND FURIOUS
+Removing: FAST AND FURIOUS
+numdvds = 8
+dvdArray.length = 14
+dvdArray[0] = ANGELS AND DEMONS / PG-13 / 138
+dvdArray[1] = DR WHO / PG-13 / 85
+dvdArray[2] = FAST AND FURIOUS 5 / PG / 90
+dvdArray[3] = LOST / G / 55
+dvdArray[4] = MONK / G / 51
+dvdArray[5] = SPARTACUS / NC-17 / 56
+dvdArray[6] = STAR TREK / R / 127
+dvdArray[7] = TROY / R / 99
+
+Select 0: Add/Modify DVD
+Select 1: Remove DVD
+Select 2: Get DVDs By Rating
+Select 3: Get Total Running Time
+Select 4: Save and Exit
+2
+Enter rating
+NC-17
+DVDs with rating NC-17
+SPARTACUS / NC-17 / 56
+
+Select 0: Add/Modify DVD
+Select 1: Remove DVD
+Select 2: Get DVDs By Rating
+Select 3: Get Total Running Time
+Select 4: Save and Exit
+2
+Enter rating
+G
+DVDs with rating G
+LOST / G / 55
+MONK / G / 51
+
+Select 0: Add/Modify DVD
+Select 1: Remove DVD
+Select 2: Get DVDs By Rating
+Select 3: Get Total Running Time
+Select 4: Save and Exit
+3
+Total Running Time of DVDs: 
+701
+Select 0: Add/Modify DVD
+Select 1: Remove DVD
+Select 2: Get DVDs By Rating
+Select 3: Get Total Running Time
+Select 4: Save and Exit
+4
