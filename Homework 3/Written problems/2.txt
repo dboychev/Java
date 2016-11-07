@@ -1,0 +1,7 @@
+a. n ^ 2 / 2 = O(n ^ 2) - going through all the values of 'n', on each of them going through all its values * 2.
+
+b. 50 * n / 3 = O(n) - going from 1 to 50 and on each case compute the values starting from 1 and adding 3 each time before reaching n.
+
+c. O(m * log(n)) - going from 1 to 'm' at the first loop, second inner loop - going from 1 to 'n', each step is (^ 2). => log(n) times.
+
+d. O(m ^ 2) + O(m) = O(m ^ 2) - first loop is O(m ^ 2), second O(m). We get the bigger one.

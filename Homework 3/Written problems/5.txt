@@ -1,0 +1,32 @@
+a. We have a loop from 1 to the length of 'a'. On each value it computes the value from 0 to i - 1.
+Worst case is if there are not two suitable values at the array. => length of a * i
+i = 1 => j = 0; i = 2 => j = 0, 1; i = 3 => j = 0, 1, 2; i = 4 => j = 0, 1, 2, 3. 
+1 * 1; 2 * 2; 3 * 3; 4 * 4. => n * n
+O(n ^ 2)
+
+b. 
+//i starts from the first element's index, j - from the last one's
+int i = 0, j = a.length - 1;
+
+//The loop works until the needed condition is reached or i and j got to the same index
+while (i != j && a[i] + a[j] != sum)
+{
+	//If a[i] and a[j]'s sum is bigger than it has to be, we decrease j, so the sum will also decrease
+	if (a[i] + a[j] > sum)
+	{
+		j--;
+	{
+	//If it is smaller, we increase i, so the sum gets bigger too 
+	else
+	{
+		i++;
+	}
+}
+
+//The function returns the opposite value of i == j statement, because if it is true, it means the
+//array does not contain two suitable elements, but if it is not it means the loop has stopped
+//before i and j get the same value, so the other condition was no more true. 
+return !(i == j);
+
+Worst case is if we go through all the elements - n steps.
+O(n)

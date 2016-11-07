@@ -1,0 +1,17 @@
+We have the equation T(n) = 6n^2 + 15n + 75
+
+a. First we have to find intersection point so cn^2 = 6n^2 + 15n + 75
+Let n = n0. Solve for c: c = 6n^2 / n0^2 + 15n / n0^2 + 75 / n0^2
+c = 6 + 15 / n0 + 75 / n0^2
+
+Let n0 = 5
+c = 6 + 3 + 3 = 12
+
+Then 12n^2 > 6n^2 + 15n + 75 for all n > 5
+6n^2 + 15n + 75 = O(n ^ 2)
+
+b. c*n^i grows faster as i is growing up. So c*n^3 grows faster than c*n^2.
+c*n^3 is always larger than c*n^2 => T(n) = O(n^3)
+
+c.c*n^2 grows faster than c*n^1, so at some point c*n^2 will be larger than c*n.
+=> T(n) != O(n)

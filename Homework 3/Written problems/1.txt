@@ -1,0 +1,3 @@
+a. O(n) - go through all the elements of s1 until 'a' is found or even not found.
+
+b. O(1) - the first elements of the strings are different or the length of both strings are not equal.

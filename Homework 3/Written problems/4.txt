@@ -1,0 +1,8 @@
+a. n data elements, n ^ 2 operations. n = 8 => operations 8 ^ 2 = 64. 
+Double the elements => n = 16. Operations n ^ 2 = 256. 256 - 64 = 192 additional operations.
+
+b. n data elements, log2(n) operations. n = 8 => operations log2(8) = 3.
+Double the elements => n = 16. Operations log2(16) = 4. 4 - 3 = 1 additional operation.
+
+c. n data elements, 2 ^ n operations. n = 8 => operations 2 ^ 8 = 256.
+Double the elements => n = 16. Operations 2 ^ 16 = 65 536. 65 536 - 256 = 65 280 additional operations.
