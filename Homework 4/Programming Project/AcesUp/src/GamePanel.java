@@ -119,14 +119,18 @@ public class GamePanel extends JPanel {
 		
 		public void actionPerformed(ActionEvent event) {
 		
+			//The program checks which button was pressed when ButtonListener notifies
 			if (event.getSource() == dealButton)
-				game.deal();
+				game.deal(); //If Deal button was pressed, the deal function is invoked
 			else if (event.getSource() == newGameButton)
-				game.startNewGame();
-			else {
+				game.startNewGame(); //If New Game button was pressed, a new game is started by that method
+			else //If neither New Game, nor Deal buttons were pressed
+			{
+				//The program checks for each of the lists if the pressed button was one of their's Discard
 				for (int listNum = 0; listNum < 4; listNum++) {
 					if (event.getSource() == discardButton[listNum])
 						game.discard(listNum);
+					//Or Move
 					else if (event.getSource() == moveButton[listNum])
 						game.move(listNum);
 				}
