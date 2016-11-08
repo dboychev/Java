@@ -1,0 +1,12 @@
+a. When the number of nodes is odd, the program returns the middle element. 'p' becomes the last
+element at the last loop, because 'q' becomes null.
+In a list with 9 nodes, by the time 'q' reaches the last but one elementh (8th or index 7), 'p'
+has reached the 4th elementh (index 3). Then 'q' becomes the next of the last element, but there
+are no more eleements, so it becomes null and before it 'p' has reached the middle element.
+
+b. If the number of nodes is even, the program should crash. Before the last loop 'q' has reached
+the final element. Then it should become the next of its next element which is next of null.
+For example in a 10 nodes list: q = 10th node, p = 5th node. => q = null -> next. 
+NullPointerException
+
+c. List has n elements. Assignments: n + n / 2 => O(n)

@@ -1,0 +1,6 @@
+E temp = new E();
+for (int i = 1; i < list.size(); i++)
+{
+	E = list.remove(i);
+	list.add(E);
+}	

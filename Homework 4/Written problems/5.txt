@@ -1,0 +1,37 @@
+public void addToHead(E element)
+{
+	boolean alreadyIn = false;	
+
+	if (head == null)
+	{
+		head = new Node<E>(element, head);
+	}
+	
+	else
+	{
+		Node<E> temp = new Node<E> (head);
+		while (!false && temp != null)
+		{
+			if (element.equals(temp))
+			{
+				alreadyIn = true;
+			}				
+			
+			temp = temp.next;
+		}
+		
+		if (!alreadyIn)
+		{
+			element.next = head.next;
+			head.next = element;
+		}	
+	}
+
+	numElements++;
+	
+	return !alreadyIn;	
+}
+
+best case - list is empty - new element is the first element: O(1)
+worst case - list is not empty and the element is not in it - all the elements should be gone
+through: O(n)

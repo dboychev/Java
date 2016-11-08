@@ -1,0 +1,11 @@
+Algorithm 1: 
+- best case - first element: O(1)
+- worst case - go through all the elements: O(n)
+
+Algorithm 2:
+- best case - the last element: O(1)
+- worst case - go through all the elements: O(n)
+
+Algorithm 3:
+- best case - the middle element: O(1)
+- worst case - separate on two parts as much times as it could be done for n: O(log2(n)
