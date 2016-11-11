@@ -1,0 +1,14 @@
+2-D Array:
+200 x 200 = 40 000.
+40 000 integers
+40 000 * 4 bytes  = 160 000 bytes
+
+Sparse matrix:
+data + row + col + nextrow + nextcol = 
+3 integers + 2 references
+3 * 4 bytes + 2 * 8 bytes = 28 bytes
+
+200 * 8 bytes + 200 * 8 bytes = 3 200 bytes
+
+160 000 - 3 200 = 156 800 bytes
+156 800 / 28 = 5 600 non zero values

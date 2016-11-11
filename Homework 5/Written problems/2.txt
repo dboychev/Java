@@ -1,0 +1,46 @@
+public E remove (int index)
+{
+	if (index >= 0 && index <= numElements - 1)
+	{
+		if (numElements == 1)
+		{
+			head = null;
+			tail = null;
+		}
+
+		if (index == 0)
+		{
+			head = head.next;
+			head.prev = null;
+		}
+		
+		else if (index == numElements - 1)
+		{
+			tail = tail.prev;
+			tail.next = null;
+		}
+		
+		else
+		{
+			int newIndex = 0;
+			Node<E> newNode = head;
+	
+			while (tempIndex < index - 1)
+			{
+				newNode = newNode.next;
+				tempIndex++;
+			}
+
+			newNode.next = newNode.next.next;
+			newNode = newNode.next;
+			newNode.prev = newNode.prev.prev;
+		}
+
+		numElements--;
+	}
+
+	else
+	{
+		throw new IndexOutOfBoundsException();
+	}
+}			

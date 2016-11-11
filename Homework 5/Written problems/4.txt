@@ -1,0 +1,16 @@
+public void print()
+{
+	Node<E> newNode = head;
+	
+	while (numElements > 0)
+	{
+		newNode = head;
+		while (newNode.next != null)
+		{
+			newNode = newNode.next);
+		}
+		System.out.println(newNode.data);
+	}	
+}
+
+Runtime Complexity: n + n - 1 + n - 2 + ... = n * n - (1 + 2 + 3 + ... + (n - 1)) => O(n ^ 2)

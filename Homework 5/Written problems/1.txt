@@ -1,0 +1,10 @@
+- a reference to the head
+- n nodes
+- a reference to the tail
+
+- Worst case runtime complexity for adding: we have a reference to the last node, so we can just 
+add another one after it. O(1)
+
+- Worst case runtime complexity for removing: we have a reference to the last node, but not to
+the one before it. So when we remove the last one, the one before it should become the last one
+and we can only get to him by starting from the top. O(n)

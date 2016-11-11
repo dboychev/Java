@@ -1,0 +1,53 @@
+a.
+public SinglyLinkedList()
+{
+	Node<E> dummyNode = new Node<E> (null);
+	head = dummyNode;
+	numElements = 0;
+}
+
+b.
+public void add(int index, E element)
+{
+	if (index < 0 || index >= numElements)
+	{
+		throw new IndexOutOfBoundsException();
+	}
+	
+	int newIndex = -1;
+	Node<E> newNode = newNode<E> (element);
+	Node<E> temp = head;	
+	while (newIndex < index)
+	{
+		temp = temp.next;
+		newIndex++;
+	}
+	
+	newNode.next = temp.next;
+	temp.next = newNode;
+
+	numElements++;
+}
+
+public E remove(int index)
+{
+	if (index < 0 || index >= numElements)
+	{
+		throw new IndexOutOfBoundsException();
+	}
+
+	int newIndex = -1;
+	Node<E> temp = head;
+	while (newIndex < index - 1)
+	{
+		temp = temp.next;
+		newIndex++;
+	}
+	
+	E data = temp.next.data;
+	temp.next = temp.next.next;
+
+	numElements--;
+
+	return data;
+}	

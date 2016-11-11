@@ -1,0 +1,66 @@
+a.
+4 + 3 + ( 7 - 4 / 2 ) * 5 - ( ( 2 + 1 ) * 6 ) * 9 - 8
+
+String postfix				Stack S			topOp
+4					+
+4 3					+
+4 3 + 					+			+
+4 3 +					+ (			
+4 3 + 7					+ (
+4 3 + 7					+ ( -			(
+4 3 + 7 4				+ ( -			
+4 3 + 7 4				+ ( - /			-
+4 3 + 7 4 2				+ ( - /
+4 3 + 7 4 2 /				+ ( - 			/
+4 3 + 7 4 2 /				+ ( -			-				
+4 3 + 7 4 2 / -				+ ( 			(
+4 3 + 7 4 2 / -				+			(
+4 3 + 7 4 2 / -				+ *		
+4 3 + 7 4 2 / - 5			+ *
+4 3 + 7 4 2 / - 5 *			+ 			*
+4 3 + 7 4 2 / - 5 *						+
+4 3 + 7 4 2 / - 5 * +			(
+4 3 + 7 4 2 / - 5 * +			( (
+4 3 + 7 4 2 / - 5 * + 2			( (			
+4 3 + 7 4 2 / - 5 * + 2			( ( +			(
+4 3 + 7 4 2 / - 5 * + 2 1		( ( + 			(
+4 3 + 7 4 2 / - 5 * + 2 1 +		( ( 			+
+4 3 + 7 4 2 / - 5 * + 2 1 +		( 			(
+4 3 + 7 4 2 / - 5 * + 2 1 +		( *			
+4 3 + 7 4 2 / - 5 * + 2 1 + 6		( *		
+4 3 + 7 4 2 / - 5 * + 2 1 + 6 *		( 			*
+4 3 + 7 4 2 / - 5 * + 2 1 + 6 *					(
+4 3 + 7 4 2 / - 5 * + 2 1 + 6 *		*
+4 3 + 7 4 2 / - 5 * + 2 1 + 6 * 9	*
+4 3 + 7 4 2 / - 5 * + 2 1 + 6 * 9 *	-			*
+4 3 + 7 4 2 / - 5 * + 2 1 + 6 * 9 * 8 -	-	
+
+b.
+8 6 3 4 + * 2 / 5 3 * - +
+
+Stack S			y	x
+8 6 3 4
+8 6			4	3	x + y = 7
+8 6 7
+8			7	6	x * y = 42
+8 42 2
+8			2	42	x / y = 21
+8 21 5
+8 21 5 3
+8 21 			3	5	x * y = 15
+8 21 15
+8			15	21	x - y = 6
+8 6
+			8	6	x + y = 14
+14
+
+--> 14
+
+c.
+If the number of operators (+, -, *, /) is not exactly the number of numbers - 1
+If operators are more - there would not be enough numbers to be popped for one of the operations.
+Or if the operators are less - there would still be numbers at the stack, but no more operations
+to do between them.
+Or in a wrong arrangement of the symbols, although operations are 1 less than the numbers.
+There also may be a situation where an operation has to be done between two numbers, but there
+is only one to be popped at the stack.

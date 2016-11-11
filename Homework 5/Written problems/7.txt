@@ -1,0 +1,16 @@
+public static LIFOStack<PlayingCard> removeAces(LIFOStack<PlayingCard> s)
+{
+	LIFOStack<PlayingCard> newS = new LIFOStack<PlayingCard> ();
+	PlayingCard card = new PlayingCard(0, 0);	
+
+	while (!s.isEmpty())
+	{
+		card = s.pop();
+		if (card.getRank() != 1)
+		{
+			newS.push(card);
+		}
+	}
+	
+	return newS;
+}

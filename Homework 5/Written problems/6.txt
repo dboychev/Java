@@ -1,0 +1,22 @@
+a.
+public E pop()
+{
+	if (top == -1)
+	{
+		return null;
+	}
+	
+	return data.remove(0);
+}
+
+Worst Runtime Complexity: if the list is not empty, all the elements have to be shifted with
+one position forward. => O(n)
+
+b.
+public void push(E element)
+{
+	data.add(0, element);
+}
+
+Worst Runtime Complexity: if the list is not empty, all the elements have to be shifted with
+one position back. => O(n)
