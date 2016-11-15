@@ -1,0 +1,3 @@
+Both can not create an instance but can - abstract methods.
+Abstract class can define methods and fields while interface - not.
+Abstract class can extend another class, interface - can not.

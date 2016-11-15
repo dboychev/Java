@@ -1,0 +1,40 @@
+a.
+public E dequeue()
+{
+	if (isEmpty())
+	{
+		throw new NoSuchElementException();
+	}
+
+	int indexMax = 0;
+	E maxP = numElements[0];
+	for (int i = 1; i < numElements; i++)
+	{
+		if (dataArray[i].compareTo(maxP) > 0)
+		{
+			maxP = dataArray[i];
+			indexMax = i;
+		}
+	}
+
+	front = i;
+	E element = dataArray[front];
+
+	if (front != rare)
+	{
+		rare = front - 1;
+		dataArray[front] = null;
+		
+		for (int i = front; i < numElements; i++)
+		{
+			dataArray[i] = dataArray[i + 1];
+		}
+	}
+
+	E element = dataArray[front];
+}
+
+b.
+When we go through the elements to find the greatest, its a loop with n steps.
+Then when we shift the elements to fill the gap of the removed element, there are alos n steps.
+n + n = 2n => O(n)

@@ -1,0 +1,42 @@
+a.
+public boolean equals(Worker other)
+{
+	return (rate == other.getSalary() / 40);
+}
+
+public String toString()
+{
+	String result = "Worker: " + name + "\n";
+	result += "Salary: " + getSalary() + "\n";
+	return result;
+}
+
+b.
+public class HourlyWorker extends Worker
+{
+	private hoursWorked;
+	
+	HourlyWorker(String newName, double newRate, double newHoursWorked)
+	{
+		super(newName, newRate);
+		
+		if (newHoursWorked < 0)
+		{
+			hoursWorked = 0;
+		}
+		else
+		{
+			hoursWorked = newHoursWorked;
+		}
+	}
+	
+	public void setRate(double newRate)
+	{
+		rate = newRate;
+	}
+
+	public void setHoursWorked(double newHoursWorked)
+	{
+		hoursWorked = newHoursWorked;
+	}
+}

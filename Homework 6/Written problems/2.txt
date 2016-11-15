@@ -1,0 +1,14 @@
+public static void reverse(FIFOQueue<String> q)
+{
+	LIFOStack<String> stack = new LIFOStack<String>();
+	int i = 0;
+	while (i < q.numElements)
+	{
+		s.push(q.dequeue());
+		i++;
+	}
+	while (!s.isEmpty())
+	{
+		q.enqueue(s.pop());
+	}
+}

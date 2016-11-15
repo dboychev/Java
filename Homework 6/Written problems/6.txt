@@ -1,0 +1,2 @@
+The code, written that way, could not be compiled because there is an error at the beginning.
+add(element) - the function invokes itself, an endless recursion.

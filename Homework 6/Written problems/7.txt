@@ -1,0 +1,2 @@
+Both ArrayStack and ListStack classes extend the LIFOStack class. s is an object of type LIFOStack
+so it can change its type to either ArrayStack or ListStack.

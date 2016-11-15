@@ -1,0 +1,37 @@
+a.
+public void printStrings(ArrayList<String> list)
+{
+	for (String str : list)
+	{
+		if (str.length() > 10)
+		{
+			System.out.println(str);
+		}
+	}
+}
+
+b.
+public void printStrings(ArrayList<String> list)
+{
+	String str = "";
+	for (int i = 0; i < list.size(); i++)
+	{
+		str = list[i];
+		if (str.length() > 10)
+		{
+			System.out.println(str);
+		}
+	}
+}	
+
+c.
+public void removeStrings(ArrayList<String> list)
+{
+	for (int i = 0; i < list.size(); i++)
+	{
+		if (list[i].contains("!")
+		{
+			list.remove(i);
+		}
+	}
+}		
