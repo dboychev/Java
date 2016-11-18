@@ -1,3 +1,7 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -157,17 +161,63 @@ public class Chemistry
 	
 	public static void main(String[] args) 
 	{
+		//Create an object for reading input
 		Scanner scan = new Scanner(System.in);
-		int lines = scan.nextInt();
+		//Two strings - for reading each line and for saving the result
 		String str = "";
 		String result = "";
 		
-		for (int i = 0; i < lines; i++)
+		//User can choose from 2 options - testing from a file or console
+		System.out.print("Choose how you want to read data: file - console (f/c)? ");
+		
+		//If file is chosen
+		if (scan.next().equals("f"))
 		{
-			str = scan.next();
-			result += calculate(str) + "\n";
+			//Name of the file should be typed
+			System.out.print("Type the name of the file: ");
+			String fileName = scan.next();
+			
+			//If the name is correct and the file does exist
+			try
+			{
+				//Create an object to read the file 
+				BufferedReader in = new BufferedReader(new FileReader(fileName));
+				//While there is still any unread text left at the file
+				while ((str = in.readLine()) != null)
+				{
+					result += calculate(str) + "\n";
+				}
+				
+				in.close();
+			}
+			
+			//If file can not be opened
+			catch (FileNotFoundException e)
+			{
+				System.out.println("File not found!");
+			}
+			
+			catch (IOException e)
+			{
+				System.out.println("Load of directory failed!");
+			}
 		}
 		
+		//If the user chose the console
+		else
+		{		
+			//Type the number of calculations
+			int lines = scan.nextInt();
+			
+			//Type each expression that has to be calculated
+			for (int i = 0; i < lines; i++)
+			{
+				str = scan.next();
+				result += calculate(str) + "\n";
+			}
+		}	
+		
+		//Print the result
 		System.out.println(result);
 	}
 
