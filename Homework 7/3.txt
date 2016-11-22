@@ -1,0 +1,24 @@
+a.
+The recursive function is done n - 1 times.
+O(n)
+
+b.
+O(n)
+
+powerB(3, 8)
+
+1. powerB(3, 4) * powerB(3, 4)
+2. powerB(3, 2) * powerB(3, 2) * powerB(3, 2) * powerB(3, 2)
+3. powerB(3, 1) * powerB(3, 1) * powerB(3, 1) * powerB(3, 1) * powerB(3, 1) * powerB(3, 1) * powerB(3, 1) * powerB(3, 1)
+4. 3 * 3 * 3 * 3 * 3 * 3 * 3 * 3
+5. 6561
+
+c.
+
+powerC(3, 8)
+
+1. result = powerC(3, 4); powerC(3, 4) * powerC(3, 4)
+2. result = powerC(3, 2); powerC(3, 2) * powerC(3, 2) * powerC(3, 2) * powerC(3, 2)
+3. result = powerC(3, 1); powerC(3, 1) * powerC(3, 1) * ... x 3
+4. 3 * 3 * 3 * 3 * 3 * 3 * 3 * 3
+5. 6561

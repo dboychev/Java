@@ -1,0 +1,41 @@
+public class SinglyLinkedList<E extends Comparable<E>>
+{
+	private Node<E> head;
+
+        /**
+         * Removes the first occurrence of the specified element, if the
+         * element is in the list.
+         */
+	
+	private Node<E> helper(Node<E> start, E element)
+	{
+		if (start.compareTo(element) == 0)
+		{
+			return start;
+		}
+		
+		else if (start != null && start.compareTo(element) != 0)
+		{
+			helper (start.next, element)
+		}
+	
+		return null;	
+	}
+	
+        public void remove(E element)
+        {
+		helper (head, element);
+        }
+
+	private static class Node<E>
+	{
+		private E data;
+		private Node<E> next;
+		
+		private Node(E dataValue)
+		{
+			data = dataValue;
+			next = null;
+		}
+	}
+}
