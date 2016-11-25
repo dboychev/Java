@@ -1,0 +1,12 @@
+public int findMin(Node<int> node)
+{
+	int min = node.data;
+
+	while (node != NULL)
+	{
+		min = node.data;
+		node = node.left;
+	}
+
+	return min;
+}

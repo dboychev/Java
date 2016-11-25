@@ -1,0 +1,12 @@
+public int minimum(Node<E> node)
+{
+	int minimum = node.data;
+	
+	while (node != null)
+	{
+		minimum = node.data;
+		node = node.left;
+	}
+	
+	return minimum;
+}

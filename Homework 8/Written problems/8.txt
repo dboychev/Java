@@ -1,0 +1,56 @@
+a.
+			42
+		      /	   \
+		    12	   53
+		   /  \      \
+		  8   16     60
+		 /      \    /
+		2	22  57
+			/
+		       19
+
+remove (n(42), 65)
+remove (n(53), 65)
+remove (n(60), 65)
+remove (n(63), 65)
+
+b.
+			42
+		      /	   \
+		    12	   53
+		   /  \      \
+		  8    22    60
+		 /     /     / \
+		2     19    57  65
+
+remove (n(42), 16)
+remove (n(12), 16)
+remove (n(16), 16)
+n(22), n(19) automatically removed with n(16)
+
+c.
+			42
+		       /   \
+		      8	   53
+		     / \     \
+		    2  16    60
+		        \     / \
+		 	22    57  65
+			/
+		       19
+
+remove (n(42), 12)
+remove (n(12), 12)
+n(8), n(2), n(16), n(22), n(19) automatically removed with n(12)
+
+d.
+			22
+		      /	   \
+		    12	   53
+		   /  \      \
+		  8   16     60
+		 /      \    / \
+		2	19  57  65
+
+remove (n(42), 42)
+n(42) was the root node of the tree, so the rightmost node of the left-side is 22 - the new root
