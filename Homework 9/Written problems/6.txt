@@ -1,0 +1,6 @@
+a.
+Otput is d different forms with these words sorted each time by a number of a letter. Firstly its by the last letter, the last sort is by the first letter.
+
+b.
+Worst case - n * d
+O(n*d)

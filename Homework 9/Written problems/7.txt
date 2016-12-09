@@ -1,0 +1,4 @@
+#1 - Merge sort
+#2 - Insertion sort
+#3 - Selection Sort
+#4 - Quick sort

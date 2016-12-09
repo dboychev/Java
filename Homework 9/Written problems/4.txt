@@ -1,0 +1,16 @@
+a.
+public static <T extends Comparable<T>> void sort(T[] table, int a, int b)
+{
+	if (b - a > 0) 
+	{
+		sort(table, a, (a+b)/2);
+		sort(table, (a+b)/2 + 1, b);
+		if (table[(a + b) / 2] > table[(a + b) / 2 + 1])
+		{
+			merge(table, a, b);
+		}
+	}
+}
+
+b.
+O (log(2) n)

@@ -1,0 +1,54 @@
+private static void swapInsert (int index)
+{
+	if (heap[index] < heap[index / 2] && index > 0)
+	{
+		T temp = heap[index];
+		heap[index] = heap[index / 2];
+		heap[index / 2] = temp;
+		swapInsert(index / 2);
+	}
+}
+	
+
+public static void insert(T newElement)
+{
+	numElements++;
+	heap[numElements] = newElement;
+	swapInsert(numElements);
+}
+
+private static void swapRemove(int index)
+{
+	if (index * 2 <= numElements)
+	{
+		if (heap[index] > heap[index * 2] || heap[index] > heap[index * 2 + 1])
+		{
+			int smallerChildIndex = 0;
+			if (heap[index * 2] < heap[index * 2 + 1])
+			{
+				smallerChildIndex = index * 2;
+			}
+			else
+			{
+				smallerChildIndex = index * 2 + 1;
+			}
+		
+			T temp = heap[index];
+			heap[index] = heap[smallerChildIndex];
+			heap[smallerChildIndex] = temp;
+			
+			swapRemove(smallerChildIndex);
+		}
+	}		
+}
+	
+
+public static T remove()
+{
+	T root = heap[1];
+	heap[1] = heap[numElements];
+	heap[numElements] = null;
+	numElemenets--;
+	swapRemove(1);
+}
+	
