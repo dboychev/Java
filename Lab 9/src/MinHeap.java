@@ -22,10 +22,10 @@ public class MinHeap
 	public void insert(int item) 
 	{ 
 		if (numElements == 1000)
-			return;
-		// COMPLETE insert METHOD BELOW. YOU MAY USE 
-		// ADDITIONAL HELPER METHOD(S) AS NECESSARY.
-		
+		{
+			reallocateArray(true);
+		}
+				
 		//Create a variable to store the index of our new element - increase numElements
 		int index = ++numElements;
 		
@@ -84,12 +84,49 @@ public class MinHeap
 			swap(newIndex);
 			index = newIndex;
 		}
-
+		
+		//If at least a quarter of the array is empty, decrease its size to half of it
+		if (numElements < data.length / 4 + 1)
+		{
+			reallocateArray(false);
+		}
+		
 		//Return the root element
-		return minimum;	// STUB: REMOVE THIS LINE WHEN YOU COMPLETE THIS METHOD
+		return minimum;
 	} 
 
-	public String toString() {
+	public void reallocateArray(boolean increase)
+	{
+		//If the parameter is true - create a new array with twice as bigger the size of the old one and assign to
+		//it the old one's values, then change the reference of the old array to the new one
+		if (increase)
+		{
+			int[] newData = new int[data.length * 2];
+
+			for (int i = 0; i < data.length; i++)
+			{
+				newData[i] = data[i];
+			}
+			
+			data = newData;
+		}
+		
+		//If the parameter is false - create a smaller array and do the same
+		else
+		{
+			int[] newData = new int[data.length / 2];
+			
+			for (int i = 1; i <= numElements; i++)
+			{
+				newData[i] = data[i];
+			}
+			
+			data = newData;
+		}
+	}
+	
+	public String toString() 
+	{
 		StringBuilder sb = new StringBuilder();
 		for (int i = 1; i <= numElements; i++) 
 			sb.append(data[i] + " ");
